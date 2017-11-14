@@ -43,13 +43,13 @@ class MainPageUIViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         
-        print("\(self.newsData?.count)")
-//        self.newsTableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
-//        self.newsTableView?.register(NewsTableViewCell.self, forCellReuseIdentifier: "newsCell")
-//        self.newsTableView?.dataSource = self
-//        self.newsTableView?.delegate = self
-//        self.newsTableView?.separatorStyle = .singleLine
-//        self.view.addSubview(self.newsTableView!)
+//        print("\(self.newsData?.count)")
+        self.newsTableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
+        self.newsTableView?.register(NewsTableViewCell.self, forCellReuseIdentifier: "newsCell")
+        self.newsTableView?.dataSource = self
+        self.newsTableView?.delegate = self
+        self.newsTableView?.separatorStyle = .singleLine
+        self.view.addSubview(self.newsTableView!)
     }
     //首页 Cell 数目
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
